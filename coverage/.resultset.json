@@ -255,6 +255,7 @@
       "/Users/erikriggs/turing_work/2mod/projects/mlb_2207/app/models/team.rb": {
         "lines": [
           1,
+          null,
           null
         ]
       },
@@ -268,6 +269,9 @@
       "/Users/erikriggs/turing_work/2mod/projects/mlb_2207/app/controllers/teams_controller.rb": {
         "lines": [
           1,
+          1,
+          0,
+          null,
           null
         ]
       },
@@ -278,6 +282,6 @@
         ]
       }
     },
-    "timestamp": 1661226264
+    "timestamp": 1661314097
   }
 }

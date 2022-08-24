@@ -1,0 +1,7 @@
+<<h1>Teams</h1>
+<% @teams.each do |team| %>
+  <h3><%= team.city %> <%= team.name %></h3>
+  <p> Record: <%= team.wins %> - <%= team.losses %> </p>
+  <p> Playoff Team: <%= team.playoffs %></p>
+
+<% end %>
