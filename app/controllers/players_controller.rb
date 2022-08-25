@@ -2,4 +2,8 @@ class PlayersController < ApplicationController
   def index
     @players = Player.all
   end
-end 
+
+  def show
+    @player = Player.find(params[:id])
+  end 
+end

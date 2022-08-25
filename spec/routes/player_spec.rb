@@ -7,4 +7,12 @@ RSpec.describe Player, type: :routing do
       :action => "index",
     )
     end
-  end 
+  it '#show' do
+    expect(:get => "/players/:id").to route_to(
+      :controller => "players",
+      :action => "show",
+      :id => ":id",
+      )
+
+    end
+  end
