@@ -4,9 +4,9 @@ RSpec.describe 'teams show page', type: :feature do
   describe 'as a user' do
     describe 'when I visit/teams/:id' do
       it 'I see the team with that id' do
-        team_1 = Team.create(name: "Mets", city: "New York",
+        team_1 = Team.create!(name: "Mets", city: "New York",
           playoffs: true, wins: 79, losses: 45)
-        team_2 = Team.create(name: "Braves", city: "Atlanta",
+        team_2 = Team.create!(name: "Braves", city: "Atlanta",
           playoffs: true, wins: 76, losses: 48)
 
           visit "/teams/#{team_1.id}"
@@ -16,9 +16,9 @@ RSpec.describe 'teams show page', type: :feature do
       end
 
       it 'I see all of the team attributes' do
-        team_1 = Team.create(name: "Mets", city: "New York",
+        team_1 = Team.create!(name: "Mets", city: "New York",
           playoffs: true, wins: 79, losses: 45)
-        team_2 = Team.create(name: "Braves", city: "Atlanta",
+        team_2 = Team.create!(name: "Braves", city: "Atlanta",
           playoffs: true, wins: 76, losses: 48)
 
           visit "/teams/#{team_1.id}"

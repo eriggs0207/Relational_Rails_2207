@@ -4,9 +4,9 @@ RSpec.describe 'teams index page', type: :feature do
   describe 'as a user' do
     describe 'when I visit/teams' do
       it 'I see the name of each team record in the system' do
-        team_1 = Team.create(name: "Mets", city: "New York",
+        team_1 = Team.create!(name: "Mets", city: "New York",
           playoffs: true, wins: 79, losses: 45)
-        team_2 = Team.create(name: "Braves", city: "Atlanta",
+        team_2 = Team.create!(name: "Braves", city: "Atlanta",
           playoffs: true, wins: 76, losses: 48)
 
         visit '/teams'
