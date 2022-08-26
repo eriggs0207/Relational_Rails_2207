@@ -31,8 +31,16 @@ RSpec.describe 'teams show page', type: :feature do
 
       it 'I see a count of players on team' do
         visit "/teams/#{@team_1.id}"
-        save_and_open_page
+
         expect(page).to have_content("Players on Roster: #{@team_1.players.count}")
+      end
+
+      it 'I see a link at the top of the page that takes me to players index' do
+        visit "/teams/#{@team_1.id}"
+
+        click_on "Mlb Players"
+
+        expect(current_path).to eq('/players')
       end
     end
   end
