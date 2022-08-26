@@ -246,6 +246,7 @@
           1,
           1,
           1,
+          1,
           null
         ]
       },
@@ -255,7 +256,154 @@
           null
         ]
       },
-      "/Users/erikriggs/turing_work/2mod/projects/mlb_2207/app/models/team.rb": {
+      "/Users/erikriggs/turing_work/2mod/projects/mlb_2207/spec/features/players/show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/erikriggs/turing_work/2mod/projects/mlb_2207/spec/features/teams/index_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/erikriggs/turing_work/2mod/projects/mlb_2207/spec/features/teams/players/index_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/erikriggs/turing_work/2mod/projects/mlb_2207/spec/features/teams/show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/erikriggs/turing_work/2mod/projects/mlb_2207/spec/models/player_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          2,
+          null
+        ]
+      },
+      "/Users/erikriggs/turing_work/2mod/projects/mlb_2207/app/models/player.rb": {
         "lines": [
           1,
           1,
@@ -269,10 +417,63 @@
           null
         ]
       },
-      "/Users/erikriggs/turing_work/2mod/projects/mlb_2207/app/models/player.rb": {
+      "/Users/erikriggs/turing_work/2mod/projects/mlb_2207/spec/models/team_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          2,
+          null
+        ]
+      },
+      "/Users/erikriggs/turing_work/2mod/projects/mlb_2207/app/models/team.rb": {
         "lines": [
           1,
           1,
+          null
+        ]
+      },
+      "/Users/erikriggs/turing_work/2mod/projects/mlb_2207/spec/routes/player_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/erikriggs/turing_work/2mod/projects/mlb_2207/spec/routes/team_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null
         ]
       },
@@ -280,7 +481,7 @@
         "lines": [
           1,
           1,
-          0,
+          2,
           null,
           null,
           1,
@@ -294,8 +495,31 @@
           1,
           null
         ]
+      },
+      "/Users/erikriggs/turing_work/2mod/projects/mlb_2207/app/controllers/teams_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/erikriggs/turing_work/2mod/projects/mlb_2207/app/controllers/team_players_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1661402076
+    "timestamp": 1661476019
   }
 }

@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Player.destroy_all
+Team.destroy_all
+
 team_1 = Team.create!(name: "Mets", city: "New York",
   playoffs: true, wins: 79, losses: 45)
 team_2 = Team.create!(name: "Braves", city: "Atlanta",
@@ -13,6 +16,7 @@ team_3 = Team.create!(name: "Phillies", city: "Philadelphia",
   playoffs: true, wins: 69, losses: 55)
 team_4 = Team.create!(name: "Marlins", city: "Miami",
   playoffs: false, wins: 54, losses: 70)
+  
 player_1 = team_1.players.create!(name: "Pete Alonso", position: "First Base",
     free_agent: false, salary: 7400000)
 player_2 = team_1.players.create!(name: "Jacob deGrom", position: "Pitcher",
