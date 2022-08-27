@@ -44,7 +44,15 @@ RSpec.describe 'players index page', type: :feature do
         click_on "Mlb Players"
 
         expect(current_path).to eq('/players')
-      end 
+      end
+
+      it 'I see a link at the top of the page that takes me to players index' do
+        visit "/players"
+
+        click_on "Mlb Teams"
+
+        expect(current_path).to eq('/teams')
+      end
     end
   end
 end

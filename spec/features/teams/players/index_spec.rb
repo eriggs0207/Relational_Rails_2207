@@ -30,6 +30,14 @@ RSpec.describe 'Team players index' do
 
         expect(current_path).to eq('/players')
       end
+
+      it 'I see a link at the top of the page that takes me to players index' do
+        visit "/teams/#{@team_1.id}/players"
+
+        click_on "Mlb Teams"
+
+        expect(current_path).to eq('/teams')
+      end
     end
   end
 end
