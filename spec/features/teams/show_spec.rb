@@ -55,9 +55,8 @@ RSpec.describe 'teams show page', type: :feature do
         visit "/teams/#{@team_1.id}"
 
         click_on "Current Players"
-        save_and_open_page
+        
         expect(current_path).to eq("/teams/#{@team_1.id}/players")
-
       end
     end
   end
