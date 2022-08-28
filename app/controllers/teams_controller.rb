@@ -25,6 +25,7 @@ class TeamsController < ApplicationController
     @team = Team.find(params[:id])
   end
 
+private 
   def team_params
     params.permit(:name, :city, :wins, :losses, :playoffs)
   end
