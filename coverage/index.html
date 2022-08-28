@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-08-28T00:05:02-06:00">2022-08-28T00:05:02-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-08-28T13:46:07-06:00">2022-08-28T13:46:07-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.36
+         1.38
        </span>
     </span> hits/line
     )
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>332</b> relevant lines,
-    <span class="green"><b>332</b> lines covered</span> and
+    <b>343</b> relevant lines,
+    <span class="green"><b>343</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -88,7 +88,7 @@
             <td class="cell--number">13</td>
             <td class="cell--number">13</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">2.31</td>
+            <td class="cell--number">2.38</td>
             
           </tr>
         
@@ -139,7 +139,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#455a9b0a074b70fa5c28a30ec043494471694be3" class="src_link" title="app/models/player.rb">app/models/player.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">3</td>
+            <td class="cell--number">8</td>
             <td class="cell--number">2</td>
             <td class="cell--number">2</td>
             <td class="cell--number">0</td>
@@ -150,7 +150,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#b1cc7d5e3f9e731088d67ccf6ac783943c763572" class="src_link" title="app/models/team.rb">app/models/team.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">3</td>
+            <td class="cell--number">4</td>
             <td class="cell--number">2</td>
             <td class="cell--number">2</td>
             <td class="cell--number">0</td>
@@ -315,11 +315,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#25f54815818cde73b304702584267c607ffd4122" class="src_link" title="spec/features/players/index_spec.rb">spec/features/players/index_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">58</td>
-            <td class="cell--number">34</td>
-            <td class="cell--number">34</td>
+            <td class="cell--number">73</td>
+            <td class="cell--number">45</td>
+            <td class="cell--number">45</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.44</td>
+            <td class="cell--number">1.53</td>
             
           </tr>
         
@@ -403,7 +403,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#667e870ed0448d5c72b11dfc9280662ecfc15244" class="src_link" title="spec/models/player_spec.rb">spec/models/player_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">5</td>
+            <td class="cell--number">29</td>
             <td class="cell--number">3</td>
             <td class="cell--number">3</td>
             <td class="cell--number">0</td>
@@ -414,7 +414,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#091d8f7f3f595d62c76ac0846052649bddef2bac" class="src_link" title="spec/models/team_spec.rb">spec/models/team_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">18</td>
+            <td class="cell--number">6</td>
             <td class="cell--number">3</td>
             <td class="cell--number">3</td>
             <td class="cell--number">0</td>
@@ -563,13 +563,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="9" data-linenumber="3">
-            <span class="hits">9</span>
+          <li class="covered" data-hits="10" data-linenumber="3">
+            <span class="hits">10</span>
             
 
             
 
-            <code class="ruby">    @players = Player.all</code>
+            <code class="ruby">    @players = Player.where(free_agent: true)</code>
           </li>
         </div>
       
@@ -1637,7 +1637,62 @@
 
             
 
-            <code class="ruby">end </code>
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="4">
+            
+            
+
+            
+
+            <code class="ruby">  # def current_free_agents</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="5">
+            
+            
+
+            
+
+            <code class="ruby">  #   self.where(free_agent: true)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="6">
+            
+            
+
+            
+
+            <code class="ruby">  # end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="7">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="8">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
           </li>
         </div>
       
@@ -1690,12 +1745,23 @@
 
             
 
-            <code class="ruby">  has_many :players </code>
+            <code class="ruby">  has_many :players</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="3">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="4">
             
             
 
@@ -4369,8 +4435,8 @@
     
 
     <div class="t-line-summary">
-      <b>34</b> relevant lines.
-      <span class="green"><b>34</b> lines covered</span> and
+      <b>45</b> relevant lines.
+      <span class="green"><b>45</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -4426,8 +4492,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="5">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="5" data-linenumber="5">
+            <span class="hits">5</span>
             
 
             
@@ -4448,8 +4514,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="7">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="5" data-linenumber="7">
+            <span class="hits">5</span>
             
 
             
@@ -4470,8 +4536,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="9">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="5" data-linenumber="9">
+            <span class="hits">5</span>
             
 
             
@@ -4492,8 +4558,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="11">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="5" data-linenumber="11">
+            <span class="hits">5</span>
             
 
             
@@ -4514,8 +4580,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="13">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="5" data-linenumber="13">
+            <span class="hits">5</span>
             
 
             
@@ -4536,13 +4602,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="15">
-            
-            
-
+          <li class="covered" data-hits="5" data-linenumber="15">
+            <span class="hits">5</span>
             
 
-            <code class="ruby">      end</code>
+            
+
+            <code class="ruby">    @player_4 = @team_2.players.create!(name: &quot;Austin Riley&quot;, position: &quot;Third Base&quot;,</code>
           </li>
         </div>
       
@@ -4553,100 +4619,12 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">        free_agent: true, salary: 3950000)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="17">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  describe &#39;as a user&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="18">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    describe &#39;when I visit/players&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="19">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      it &#39;I see the name of each player record in the system&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="20">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        visit &#39;/players&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="21">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="22">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(page).to have_content(@player_1.name)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="23">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(page).to have_content(@player_2.name)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="24">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(page).to have_content(@player_3.name)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="25">
+          <li class="never" data-hits="" data-linenumber="17">
             
             
 
@@ -4657,7 +4635,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="26">
+          <li class="never" data-hits="" data-linenumber="18">
             
             
 
@@ -4668,24 +4646,112 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="27">
+          <li class="covered" data-hits="1" data-linenumber="19">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      it &#39;shows all the players attributes&#39; do</code>
+            <code class="ruby">  describe &#39;as a user&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="28">
+          <li class="covered" data-hits="1" data-linenumber="20">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    describe &#39;when I visit/players&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="21">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      it &#39;I see the name of each player record in the system&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="22">
             <span class="hits">1</span>
             
 
             
 
             <code class="ruby">        visit &#39;/players&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="23">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="24">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_no_content(@player_1.name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="25">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_content(@player_2.name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="26">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_no_content(@player_3.name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="27">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_content(@player_4.name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="28">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -4707,7 +4773,7 @@
 
             
 
-            <code class="ruby">        expect(page).to have_content(&quot;Team: #{@player_1.team.city} #{@player_1.team.name}&quot;)</code>
+            <code class="ruby">      it &#39;shows all the players attributes&#39; do</code>
           </li>
         </div>
       
@@ -4718,18 +4784,18 @@
 
             
 
-            <code class="ruby">        expect(page).to have_content(&quot;Team: #{@player_2.team.city} #{@player_2.team.name}&quot;)</code>
+            <code class="ruby">        visit &#39;/players&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="32">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="32">
+            
             
 
             
 
-            <code class="ruby">        expect(page).to have_content(&quot;Team: #{@player_3.team.city} #{@player_3.team.name}&quot;)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4740,7 +4806,7 @@
 
             
 
-            <code class="ruby">        expect(page).to have_content(&quot;Salary: #{@player_1.salary}&quot;)</code>
+            <code class="ruby">        expect(page).to have_content(&quot;Team: #{@player_1.team.city} #{@player_1.team.name}&quot;)</code>
           </li>
         </div>
       
@@ -4751,7 +4817,7 @@
 
             
 
-            <code class="ruby">        expect(page).to have_content(&quot;Salary: #{@player_2.salary}&quot;)</code>
+            <code class="ruby">        expect(page).to have_content(&quot;Team: #{@player_2.team.city} #{@player_2.team.name}&quot;)</code>
           </li>
         </div>
       
@@ -4762,7 +4828,7 @@
 
             
 
-            <code class="ruby">        expect(page).to have_content(&quot;Salary: #{@player_3.salary}&quot;)</code>
+            <code class="ruby">        expect(page).to have_content(&quot;Team: #{@player_3.team.city} #{@player_3.team.name}&quot;)</code>
           </li>
         </div>
       
@@ -4773,7 +4839,7 @@
 
             
 
-            <code class="ruby">        expect(page).to have_content(&quot;Free Agent Next Season: #{@player_1.free_agent}&quot;)</code>
+            <code class="ruby">        expect(page).to have_content(&quot;Team: #{@player_4.team.city} #{@player_4.team.name}&quot;)</code>
           </li>
         </div>
       
@@ -4784,7 +4850,7 @@
 
             
 
-            <code class="ruby">        expect(page).to have_content(&quot;Free Agent Next Season: #{@player_2.free_agent}&quot;)</code>
+            <code class="ruby">        expect(page).to have_no_content(&quot;Salary: #{@player_1.salary}&quot;)</code>
           </li>
         </div>
       
@@ -4795,29 +4861,29 @@
 
             
 
-            <code class="ruby">        expect(page).to have_content(&quot;Free Agent Next Season: #{@player_3.free_agent}&quot;)</code>
+            <code class="ruby">        expect(page).to have_content(&quot;Salary: #{@player_2.salary}&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="39">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="39">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">      end</code>
+            
+
+            <code class="ruby">        expect(page).to have_no_content(&quot;Salary: #{@player_3.salary}&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="40">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="40">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">        expect(page).to have_content(&quot;Salary: #{@player_4.salary}&quot;)</code>
           </li>
         </div>
       
@@ -4828,7 +4894,7 @@
 
             
 
-            <code class="ruby">      it &#39;I see a link at the top of the page that takes me to players index&#39; do</code>
+            <code class="ruby">        expect(page).to have_no_content(&quot;Free Agent Next Season: #{@player_1.free_agent}&quot;)</code>
           </li>
         </div>
       
@@ -4839,18 +4905,18 @@
 
             
 
-            <code class="ruby">        visit &quot;/players&quot;</code>
+            <code class="ruby">        expect(page).to have_content(&quot;Free Agent Next Season: #{@player_2.free_agent}&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="43">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="43">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">        expect(page).to have_no_content(&quot;Free Agent Next Season: #{@player_3.free_agent}&quot;)</code>
           </li>
         </div>
       
@@ -4861,7 +4927,7 @@
 
             
 
-            <code class="ruby">        click_on &quot;Mlb Players&quot;</code>
+            <code class="ruby">        expect(page).to have_content(&quot;Free Agent Next Season: #{@player_4.free_agent}&quot;)</code>
           </li>
         </div>
       
@@ -4872,34 +4938,12 @@
 
             
 
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="46">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(current_path).to eq(&#39;/players&#39;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="47">
-            
-            
-
-            
-
             <code class="ruby">      end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="48">
+          <li class="never" data-hits="" data-linenumber="46">
             
             
 
@@ -4910,7 +4954,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="49">
+          <li class="covered" data-hits="1" data-linenumber="47">
             <span class="hits">1</span>
             
 
@@ -4921,13 +4965,35 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="50">
+          <li class="covered" data-hits="1" data-linenumber="48">
             <span class="hits">1</span>
             
 
             
 
             <code class="ruby">        visit &quot;/players&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="49">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="50">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        click_on &quot;Mlb Players&quot;</code>
           </li>
         </div>
       
@@ -4949,7 +5015,7 @@
 
             
 
-            <code class="ruby">        click_on &quot;Mlb Teams&quot;</code>
+            <code class="ruby">        expect(current_path).to eq(&#39;/players&#39;)</code>
           </li>
         </div>
       
@@ -4960,40 +5026,40 @@
 
             
 
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="54">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(current_path).to eq(&#39;/teams&#39;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="55">
-            
-            
-
-            
-
             <code class="ruby">      end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="56">
+          <li class="never" data-hits="" data-linenumber="54">
             
             
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="55">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      it &#39;I see a link at the top of the page that takes me to players index&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="56">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        visit &quot;/players&quot;</code>
           </li>
         </div>
       
@@ -5004,12 +5070,177 @@
 
             
 
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="58">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        click_on &quot;Mlb Teams&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="59">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="60">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(current_path).to eq(&#39;/teams&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="61">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="62">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="63">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      it &#39;only shows records of players that are free agents&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="64">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        visit &quot;/players&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="65">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="66">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_content(&quot;Jacob deGrom&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="67">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_content(&quot;Austin Riley&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="68">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_no_content(&quot;Pete Alonso&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="69">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_no_content(&quot;Ronald Acuna Jr&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="70">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="71">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="72">
+            
+            
+
+            
+
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="58">
+          <li class="never" data-hits="" data-linenumber="73">
             
             
 
@@ -8728,7 +8959,271 @@
 
             
 
-            <code class="ruby">end </code>
+            <code class="ruby">  # describe &#39;instance methods&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="6">
+            
+            
+
+            
+
+            <code class="ruby">  #   before :each do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="7">
+            
+            
+
+            
+
+            <code class="ruby">  #     @team_1 = Team.create!(name: &quot;Mets&quot;, city: &quot;New York&quot;,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="8">
+            
+            
+
+            
+
+            <code class="ruby">  #         playoffs: true, wins: 79, losses: 45)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby">  #     @team_2 = Team.create!(name: &quot;Braves&quot;, city: &quot;Atlanta&quot;,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
+            <code class="ruby">  #         playoffs: true, wins: 76, losses: 48)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
+            
+            
+
+            
+
+            <code class="ruby">  #     @player_1 = @team_1.players.create!(name: &quot;Pete Alonso&quot;, position: &quot;First Base&quot;,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="12">
+            
+            
+
+            
+
+            <code class="ruby">  #         free_agent: false, salary: 7400000)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="13">
+            
+            
+
+            
+
+            <code class="ruby">  #     @player_2 = @team_1.players.create!(name: &quot;Jacob deGrom&quot;, position: &quot;Pitcher&quot;,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
+            
+            
+
+            
+
+            <code class="ruby">  #         free_agent: true, salary: 33000000)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="15">
+            
+            
+
+            
+
+            <code class="ruby">  #     @player_3 = @team_2.players.create!(name: &quot;Ronald Acuna Jr&quot;, position: &quot;Center Field&quot;,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="16">
+            
+            
+
+            
+
+            <code class="ruby">  #         free_agent: false, salary: 12500000)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
+            
+            
+
+            
+
+            <code class="ruby">  #     @player_4 = @team_2.players.create!(name: &quot;Austin Riley&quot;, position: &quot;Third Base&quot;,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
+            
+            
+
+            
+
+            <code class="ruby">  #         free_agent: true, salary: 3950000)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="19">
+            
+            
+
+            
+
+            <code class="ruby">  #       end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="20">
+            
+            
+
+            
+
+            <code class="ruby">  #</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="21">
+            
+            
+
+            
+
+            <code class="ruby">  #   describe &#39;#current_free_agents&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="22">
+            
+            
+
+            
+
+            <code class="ruby">  #     it &#39;returns players that are free agents next season&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="23">
+            
+            
+
+            
+
+            <code class="ruby">  #       expect(@player_1.current_free_agents).to eq(false)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="24">
+            
+            
+
+            
+
+            <code class="ruby">  #       expect(@player_2.current_free_agents).to eq(true)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="25">
+            
+            
+
+            
+
+            <code class="ruby">  #       expect(@player_4.current_free_agents).to eq(true)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="26">
+            
+            
+
+            
+
+            <code class="ruby">  #     end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="27">
+            
+            
+
+            
+
+            <code class="ruby">  #   end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="28">
+            
+            
+
+            
+
+            <code class="ruby">  # end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="29">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
           </li>
         </div>
       
@@ -8814,144 +9309,12 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  </code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="6">
-            
-            
-
-            
-
-            <code class="ruby">  # describe &#39;instance methods&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="7">
-            
-            
-
-            
-
-            <code class="ruby">  #   before :each do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="8">
-            
-            
-
-            
-
-            <code class="ruby">  #     @team_1 = Team.create!(name: &quot;Mets&quot;, city: &quot;New York&quot;,</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="9">
-            
-            
-
-            
-
-            <code class="ruby">  #       playoffs: true, wins: 79, losses: 45)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="10">
-            
-            
-
-            
-
-            <code class="ruby">  #     @team_2 = Team.create!(name: &quot;Braves&quot;, city: &quot;Atlanta&quot;,</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="11">
-            
-            
-
-            
-
-            <code class="ruby">  #       playoffs: true, wins: 76, losses: 48)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="12">
-            
-            
-
-            
-
-            <code class="ruby">  #     @team_3 = Team.create!(name: &quot;Phillies&quot;, city: &quot;Philadelphia&quot;,</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="13">
-            
-            
-
-            
-
-            <code class="ruby">  #       playoffs: true, wins: 69, losses: 55)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="14">
-            
-            
-
-            
-
-            <code class="ruby">  #     @team_4 = Team.create!(name: &quot;Marlins&quot;, city: &quot;Miami&quot;,</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="15">
-            
-            
-
-            
-
-            <code class="ruby">  #       playoffs: false, wins: 54, losses: 70)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="16">
-            
-            
-
-            
-
-            <code class="ruby">  #   end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="17">
-            
-            
-
-            
-
-            <code class="ruby">  # end </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="18">
             
             
 
