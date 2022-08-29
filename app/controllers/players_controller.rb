@@ -17,6 +17,11 @@ class PlayersController < ApplicationController
     redirect_to "/players/#{@player.id}"
   end
 
+  def destroy
+    @player = Player.destroy(params[:id])
+    redirect_to "/players"
+  end
+
   def player_params
     params.permit(:name, :position, :free_agent, :salary)
   end

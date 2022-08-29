@@ -256,6 +256,7 @@
           1,
           1,
           1,
+          1,
           null
         ]
       },
@@ -283,55 +284,6 @@
           null
         ]
       },
-      "/Users/erikriggs/turing_work/2mod/projects/mlb_2207/app/controllers/teams_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/erikriggs/turing_work/2mod/projects/mlb_2207/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
       "/Users/erikriggs/turing_work/2mod/projects/mlb_2207/app/models/player.rb": {
         "lines": [
           1,
@@ -343,8 +295,46 @@
           null,
           null
         ]
+      },
+      "/Users/erikriggs/turing_work/2mod/projects/mlb_2207/app/controllers/players_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/erikriggs/turing_work/2mod/projects/mlb_2207/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1661741071
+    "timestamp": 1661742872
   }
 }

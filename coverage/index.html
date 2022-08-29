@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-08-28T20:44:31-06:00">2022-08-28T20:44:31-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-08-28T21:14:32-06:00">2022-08-28T21:14:32-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  90.7%
+  92.68%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.92
+         0.94
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>86</b> relevant lines,
-    <span class="green"><b>78</b> lines covered</span> and
-    <span class="red"><b>8</b> lines missed. </span>
+    <b>82</b> relevant lines,
+    <span class="green"><b>76</b> lines covered</span> and
+    <span class="red"><b>6</b> lines missed. </span>
     (<span class="green">
-  90.7%
+  92.68%
 </span>
 )
   </div>
@@ -82,13 +82,13 @@
           </tr>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#dc5a39340c0aa2428125739c483d9bd1ee5f8018" class="src_link" title="app/controllers/teams_controller.rb">app/controllers/teams_controller.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">66.67 %</td>
-            <td class="cell--number">39</td>
-            <td class="cell--number">21</td>
-            <td class="cell--number">14</td>
-            <td class="cell--number">7</td>
-            <td class="cell--number">0.67</td>
+            <td class="strong t-file__name"><a href="#4be89b0ea3ab436bc20877e77fd36506411adc0d" class="src_link" title="app/controllers/players_controller.rb">app/controllers/players_controller.rb</a></td>
+            <td class="red strong cell--number t-file__coverage">68.75 %</td>
+            <td class="cell--number">28</td>
+            <td class="cell--number">16</td>
+            <td class="cell--number">11</td>
+            <td class="cell--number">5</td>
+            <td class="cell--number">0.69</td>
             
           </tr>
         
@@ -282,9 +282,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#c0a51db8f3ca580eae91fb02dfe4691cb9f51b3b" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">17</td>
-            <td class="cell--number">15</td>
-            <td class="cell--number">15</td>
+            <td class="cell--number">18</td>
+            <td class="cell--number">16</td>
+            <td class="cell--number">16</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -360,12 +360,12 @@
 </div>
 
       
-        <div class="source_table" id="dc5a39340c0aa2428125739c483d9bd1ee5f8018">
+        <div class="source_table" id="4be89b0ea3ab436bc20877e77fd36506411adc0d">
   <div class="header">
-    <h3>app/controllers/teams_controller.rb</h3>
+    <h3>app/controllers/players_controller.rb</h3>
     <h4>
       <span class="red">
-  66.67%
+  68.75%
 </span>
 
       lines covered
@@ -374,9 +374,9 @@
     
 
     <div class="t-line-summary">
-      <b>21</b> relevant lines.
-      <span class="green"><b>14</b> lines covered</span> and
-      <span class="red"><b>7</b> lines missed.</span>
+      <b>16</b> relevant lines.
+      <span class="green"><b>11</b> lines covered</span> and
+      <span class="red"><b>5</b> lines missed.</span>
     </div>
 
     
@@ -393,7 +393,7 @@
 
             
 
-            <code class="ruby">class TeamsController &lt; ApplicationController</code>
+            <code class="ruby">class PlayersController &lt; ApplicationController</code>
           </li>
         </div>
       
@@ -415,7 +415,7 @@
 
             
 
-            <code class="ruby">    @teams = Team.order(&quot;created_at&quot;)</code>
+            <code class="ruby">    @players = Player.where(free_agent: true)</code>
           </li>
         </div>
       
@@ -448,18 +448,18 @@
 
             
 
-            <code class="ruby">  def new</code>
+            <code class="ruby">  def show</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="7">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="7">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    @player = Player.find(params[:id])</code>
           </li>
         </div>
       
@@ -470,29 +470,29 @@
 
             
 
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="9">
+          <li class="covered" data-hits="1" data-linenumber="10">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  def create</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="10">
-            
-            
-
-            
-
-            <code class="ruby">    team = Team.create(team_params)</code>
+            <code class="ruby">  def edit</code>
           </li>
         </div>
       
@@ -503,7 +503,7 @@
 
             
 
-            <code class="ruby">    redirect_to &quot;/teams&quot;</code>
+            <code class="ruby">    @player = Player.find(params[:id])</code>
           </li>
         </div>
       
@@ -536,7 +536,7 @@
 
             
 
-            <code class="ruby">  def edit</code>
+            <code class="ruby">  def update</code>
           </li>
         </div>
       
@@ -547,12 +547,34 @@
 
             
 
-            <code class="ruby">    @team = Team.find(params[:id])</code>
+            <code class="ruby">    @player = Player.find(params[:id])</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="16">
+          <li class="missed" data-hits="0" data-linenumber="16">
+            
+            
+
+            
+
+            <code class="ruby">    @player.update(player_params)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="17">
+            
+            
+
+            
+
+            <code class="ruby">    redirect_to &quot;/players/#{@player.id}&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
             
             
 
@@ -563,7 +585,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="17">
+          <li class="never" data-hits="" data-linenumber="19">
             
             
 
@@ -574,117 +596,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="18">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def update</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="19">
-            
-            
-
-            
-
-            <code class="ruby">    @team = Team.find(params[:id])</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="20">
-            
-            
-
-            
-
-            <code class="ruby">    @team.update(team_params)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="21">
-            
-            
-
-            
-
-            <code class="ruby">    redirect_to &quot;/teams/#{@team.id}&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="22">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="23">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="24">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def show</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="25">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    @team = Team.find(params[:id])</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="26">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="27">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="28">
+          <li class="covered" data-hits="1" data-linenumber="20">
             <span class="hits">1</span>
             
 
@@ -695,29 +607,29 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="29">
+          <li class="covered" data-hits="1" data-linenumber="21">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    @team = Team.destroy(params[:id])</code>
+            <code class="ruby">    @player = Player.destroy(params[:id])</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="30">
+          <li class="covered" data-hits="1" data-linenumber="22">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    redirect_to &quot;/teams&quot;</code>
+            <code class="ruby">    redirect_to &quot;/players&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="31">
+          <li class="never" data-hits="" data-linenumber="23">
             
             
 
@@ -728,7 +640,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="32">
+          <li class="never" data-hits="" data-linenumber="24">
             
             
 
@@ -739,40 +651,29 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="33">
+          <li class="covered" data-hits="1" data-linenumber="25">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">private</code>
+            <code class="ruby">  def player_params</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="34">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="26">
+            
             
 
             
 
-            <code class="ruby">  def team_params</code>
+            <code class="ruby">    params.permit(:name, :position, :free_agent, :salary)</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="35">
-            
-            
-
-            
-
-            <code class="ruby">    params.permit(:name, :city, :wins, :losses, :playoffs)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="36">
+          <li class="never" data-hits="" data-linenumber="27">
             
             
 
@@ -783,29 +684,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="37">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="38">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="39">
+          <li class="never" data-hits="" data-linenumber="28">
             
             
 
@@ -3616,8 +3495,8 @@
     
 
     <div class="t-line-summary">
-      <b>15</b> relevant lines.
-      <span class="green"><b>15</b> lines covered</span> and
+      <b>16</b> relevant lines.
+      <span class="green"><b>16</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -3690,7 +3569,7 @@
 
             
 
-            <code class="ruby">  get &#39;/players&#39;, to: &#39;players#index&#39;</code>
+            <code class="ruby">  delete &#39;teams/:id&#39;, to: &#39;teams#destroy&#39;</code>
           </li>
         </div>
       
@@ -3701,7 +3580,7 @@
 
             
 
-            <code class="ruby">  get &#39;players/:id&#39;, to: &#39;players#show&#39;</code>
+            <code class="ruby">  post &#39;/teams&#39;, to: &#39;teams#create&#39;</code>
           </li>
         </div>
       
@@ -3712,7 +3591,7 @@
 
             
 
-            <code class="ruby">  get &#39;/teams/:team_id/players&#39;, to: &#39;team_players#index&#39;</code>
+            <code class="ruby">  patch &#39;teams/:id&#39;, to: &#39;teams#update&#39;</code>
           </li>
         </div>
       
@@ -3723,7 +3602,7 @@
 
             
 
-            <code class="ruby">  get &#39;/teams/:team_id/players/new&#39;, to: &#39;team_players#new&#39;</code>
+            <code class="ruby">  get &#39;/teams/:id/edit&#39;, to: &#39;teams#edit&#39;</code>
           </li>
         </div>
       
@@ -3734,7 +3613,7 @@
 
             
 
-            <code class="ruby">  post &#39;/teams&#39;, to: &#39;teams#create&#39;</code>
+            <code class="ruby">  get &#39;/players&#39;, to: &#39;players#index&#39;</code>
           </li>
         </div>
       
@@ -3745,7 +3624,7 @@
 
             
 
-            <code class="ruby">  get &#39;/teams/:id/edit&#39;, to: &#39;teams#edit&#39;</code>
+            <code class="ruby">  get &#39;players/:id&#39;, to: &#39;players#show&#39;</code>
           </li>
         </div>
       
@@ -3756,7 +3635,7 @@
 
             
 
-            <code class="ruby">  patch &#39;teams/:id&#39;, to: &#39;teams#update&#39;</code>
+            <code class="ruby">  patch &#39;players/:id&#39;, to: &#39;players#update&#39;</code>
           </li>
         </div>
       
@@ -3767,7 +3646,7 @@
 
             
 
-            <code class="ruby">  post &#39;/teams/:team_id/players&#39;, to: &#39;team_players#create&#39;</code>
+            <code class="ruby">  get &#39;/players/:id/edit&#39;, to: &#39;players#edit&#39;</code>
           </li>
         </div>
       
@@ -3778,7 +3657,7 @@
 
             
 
-            <code class="ruby">  get &#39;/players/:id/edit&#39;, to: &#39;players#edit&#39;</code>
+            <code class="ruby">  delete &#39;/players/:id&#39;, to: &#39;players#destroy&#39;</code>
           </li>
         </div>
       
@@ -3789,7 +3668,7 @@
 
             
 
-            <code class="ruby">  patch &#39;players/:id&#39;, to: &#39;players#update&#39;</code>
+            <code class="ruby">  get &#39;/teams/:team_id/players&#39;, to: &#39;team_players#index&#39;</code>
           </li>
         </div>
       
@@ -3800,12 +3679,23 @@
 
             
 
-            <code class="ruby">  delete &#39;teams/:id&#39;, to: &#39;teams#destroy&#39; </code>
+            <code class="ruby">  get &#39;/teams/:team_id/players/new&#39;, to: &#39;team_players#new&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="17">
+          <li class="covered" data-hits="1" data-linenumber="17">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  post &#39;/teams/:team_id/players&#39;, to: &#39;team_players#create&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
             
             
 
