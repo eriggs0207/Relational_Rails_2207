@@ -2,6 +2,7 @@
 <p><%= link_to "Mlb Teams", "/teams" %></p>
 <h1><%= @team.city %> <%= @team.name %></h1>
 <p><%= button_to "Edit #{@team.city} #{@team.name}", "/teams/#{@team.id}/edit", method: :get %></p>
+<p><%= button_to "Delete #{@team.city} #{@team.name}", "/teams/#{@team.id}", method: :delete %></p>
 <p>Record: <%= @team.wins %> - <%= @team.losses %></p>
 <p>Playoff Team: <%= @team.playoffs %></p>
 <p>Players on Roster: <%= @team.players.count %></p>
