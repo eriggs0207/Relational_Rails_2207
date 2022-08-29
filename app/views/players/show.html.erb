@@ -1,6 +1,7 @@
 <p><%= link_to "Mlb Players", "/players" %></p>
 <p><%= link_to "Mlb Teams", "/teams" %></p>
 <h1><%= @player.name %></h1>
+<p><%= button_to "Edit #{@player.name}", "/players/#{@player.id}/edit", method: :get %></p>
 <h3>Team: <%= @player.team.city %> <%= @player.team.name %></h3>
 <p>Salary: <%= @player.salary %></p>
 <p>Free Agent Next Season: <%= @player.free_agent %></p>

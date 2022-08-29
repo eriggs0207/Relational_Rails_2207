@@ -1,0 +1,13 @@
+<%= form_with url: "/players/#{@player.id}", method: :patch, local: true do |form| %>
+
+<%= form.label :name %>
+<%= form.text_field :name %>
+<%= form.label :position %>
+<%= form.text_field :position %>
+<%= form.label :free_agent %>
+<%= form.text_field :free_agent %>
+<%= form.label :salary %>
+<%= form.text_field :salary %>
+
+<%= form.submit "Update Player" %>
+<% end %>

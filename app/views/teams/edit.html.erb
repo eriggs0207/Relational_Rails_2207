@@ -1,0 +1,16 @@
+<%= form_with url: "/teams/#{@team.id}", method: :patch, local: true do |form| %>
+
+<%= form.label :name %>
+<%= form.text_field :name%>
+<%= form.label :city %>
+<%= form.text_field :city%>
+<%= form.label :wins %>
+<%= form.text_field :wins%>
+<%= form.label :losses %>
+<%= form.text_field :losses%>
+<%= form.label :playoffs %>
+<%= form.text_field :playoffs%>
+
+
+<%= form.submit "Update Team" %>
+<% end %>
