@@ -5,6 +5,7 @@
 <% @players.each.with_index do |player, index| %>
 <div id="<%=index%>">
 <h3><%= player.name %> <%= button_to "Edit #{player.name}", "/players/#{player.id}/edit", method: :get %></h3>
+<p><%= button_to "Delete #{player.name}", "/players/#{player.id}", method: :delete %></p>
 <p>Salary: <%= player.salary %></p>
 <p>Free Agent Next Season: <%= player.free_agent %></p>
 </div>

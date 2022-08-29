@@ -10,7 +10,7 @@ RSpec.describe 'the team delete' do
       free_agent: true, salary: 33000000)
     end
 
-  it 'I see a link to delete the team' do
+  it 'I see a link to delete the player' do
     visit "/players/#{@player_1.id}"
 
     click_button "Delete #{@player_1.name}"
@@ -19,5 +19,26 @@ RSpec.describe 'the team delete' do
     expect(page).to have_no_content(@player_1.name)
     expect(page).to have_content(@player_2.salary)
 
+  end
+
+  it 'I see a link to delete the player' do
+    visit "/players"
+
+    click_button "Delete #{@player_1.name}"
+    expect(current_path).to eq("/players")
+
+    expect(page).to have_no_content(@player_1.name)
+    expect(page).to have_content(@player_2.salary)
+
+  end
+
+  it 'I see a link to delete the player' do
+    visit "/teams/#{@team_1.id}/players"
+
+    click_button "Delete #{@player_1.name}"
+    expect(current_path).to eq("/players")
+
+    expect(page).to have_no_content(@player_1.name)
+    expect(page).to have_content(@player_2.salary)
   end
 end
