@@ -31,7 +31,35 @@ RSpec.describe 'the team edit' do
 
     fill_in 'Name', with: 'Cubs'
     click_button 'Update Team'
-    
+
+    expect(current_path).to eq("/teams/#{team_6.id}")
+    expect(page).to have_content('Cubs')
+  end
+
+  it 'I see a link to update the team' do
+    visit "/teams"
+
+    click_button "Edit #{@team_1.city} #{@team_1.name}"
+    expect(current_path).to eq("/teams/#{@team_1.id}/edit")
+
+    visit "/teams"
+
+    click_button "Edit #{@team_2.city} #{@team_2.name}"
+    expect(current_path).to eq("/teams/#{@team_2.id}/edit")
+  end
+
+  it 'can edit the team' do
+    team_6 = Team.create!(name: "Cubbies", city: "Chicago",
+      playoffs: false, wins: 45, losses: 79)
+
+    visit "/teams"
+
+    expect(page).to have_content('Chicago Cubbies')
+    click_button 'Edit Chicago Cubbies'
+
+    fill_in 'Name', with: 'Cubs'
+    click_button 'Update Team'
+
     expect(current_path).to eq("/teams/#{team_6.id}")
     expect(page).to have_content('Cubs')
   end

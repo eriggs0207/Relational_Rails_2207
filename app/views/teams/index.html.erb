@@ -3,7 +3,7 @@
 <h1>Teams</h1>
 <% @teams.each.with_index do |team, index| %>
 <div id="<%=index%>">
-  <h3> <%= team.city %> <%= team.name %></h3>
+  <h3> <%= team.city %> <%= team.name %> <%= button_to "Edit #{team.city} #{team.name}", "/teams/#{team.id}/edit", method: :get %></h3>
   <p><%= team.created_at %></p>
   <p> Record: <%= team.wins %> - <%= team.losses %> </p>
   <p> Playoff Team: <%= team.playoffs %></p>
