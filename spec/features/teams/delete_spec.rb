@@ -18,4 +18,15 @@ RSpec.describe 'the team delete' do
     expect(page).to have_content(@team_2.wins)
 
   end
+
+  it 'I see a link to delete the team' do
+    visit "/teams"
+
+    click_button "Delete #{@team_1.city} #{@team_1.name}"
+    expect(current_path).to eq("/teams")
+
+    expect(page).to have_no_content(@team_1.name)
+    expect(page).to have_content(@team_2.wins)
+
+  end
 end
