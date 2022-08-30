@@ -20,13 +20,16 @@ RSpec.describe 'player creation' do
   it 'can create a new player on a team' do
     visit "/teams/#{@team_1.id}/players/new"
 
-    fill_in("Name", with: "Max Scherzer")
-    fill_in("Position", with: "Pitcher")
-    fill_in("Free agent", with: false)
-    fill_in("Salary", with: 43333333)
-    click_button("Add Player")
+    fill_in "Name", with: "Max Scherzer"
+    fill_in "Position", with: "Pitcher"
+    choose with: false
+    fill_in "Salary", with: 43333333
+    click_button"Add Player"
 
     expect(current_path).to eq("/teams/#{@team_1.id}/players")
     expect(page).to have_content("Max Scherzer")
+    expect(page).to have_content(false)
+    expect(page).to have_content("Pitcher")
+    expect(page).to have_content(43333333)
   end
 end
