@@ -2,10 +2,19 @@
 <p><%= link_to "Mlb Teams", "/teams" %></p>
 <h1><%= @team.city %> <%= @team.name %></h1>
 <p><%= link_to "Sort Players", "/teams/#{@team.id}/players?sort_players=name" %></p>
+<p><%= form_with url: "/teams/#{@team.id}/players?min_salary=0", local: true, method: :get do |form| %></p>
+
+    <p><%= form.label :min_salary, "Select a Minimum Salary for Player" %>
+    <%= form.number_field :min_salary %></p>
+    <p><%= form.submit "Update Players" %></p>
+
+  <% end %>
+
 <% @players.each.with_index do |player, index| %>
 <div id="<%=index%>">
 <h3><%= player.name %> <%= button_to "Edit #{player.name}", "/players/#{player.id}/edit", method: :get %></h3>
 <p><%= button_to "Delete #{player.name}", "/players/#{player.id}", method: :delete %></p>
+<p>Position: <%= player.position %></p>
 <p>Salary: <%= player.salary %></p>
 <p>Free Agent Next Season: <%= player.free_agent %></p>
 </div>
