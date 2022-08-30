@@ -5,5 +5,5 @@
 <p><%= button_to "Delete #{@team.city} #{@team.name}", "/teams/#{@team.id}", method: :delete %></p>
 <p>Record: <%= @team.wins %> - <%= @team.losses %></p>
 <p>Playoff Team: <%= @team.playoffs %></p>
-<p>Players on Roster: <%= @team.players.count %></p>
+<p>Players on Roster: <%= @team.player_count %></p>
 <%= link_to "Current Players", "/teams/#{@team.id}/players" %>
