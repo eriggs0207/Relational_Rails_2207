@@ -16,10 +16,11 @@ RSpec.describe 'team creation' do
     fill_in("City", with: "Washington")
     fill_in("Wins", with: 42)
     fill_in("Losses", with: 84)
-    fill_in("Playoffs", with: false)
+    choose( with: false)
     click_button("Add Team")
 
     expect(current_path).to eq("/teams")
     expect(page).to have_content("Nationals")
+    expect(page).to have_content(false)
   end
 end
