@@ -13,7 +13,7 @@ RSpec.describe 'Team players index' do
     end
 
   describe 'as a user' do
-    describe 'when I visit/teams' do
+    describe 'when I visit/teams/:id/players' do
       it 'shows all the players on that team and their attributes' do
         visit "/teams/#{@team_1.id}/players"
 
@@ -23,7 +23,7 @@ RSpec.describe 'Team players index' do
         expect(page).to have_content("Free Agent Next Season: #{@player_1.free_agent}")
       end
 
-      it 'I see a link at the top of the page that takes me to players index' do
+      it 'has a link at the top of the page that takes me to /players' do
         visit "/teams/#{@team_1.id}/players"
 
         click_on "Mlb Players"
@@ -31,7 +31,7 @@ RSpec.describe 'Team players index' do
         expect(current_path).to eq('/players')
       end
 
-      it 'I see a link at the top of the page that takes me to players index' do
+      it 'has a link at the top of the page that takes me to /teams' do
         visit "/teams/#{@team_1.id}/players"
 
         click_on "Mlb Teams"
@@ -39,7 +39,7 @@ RSpec.describe 'Team players index' do
         expect(current_path).to eq('/teams')
       end
 
-      it 'I see a link to sort players that returns players in alphabetical order' do
+      it 'has a link to sort players that returns players in alphabetical order' do
         visit "/teams/#{@team_1.id}/players"
 
         click_on "Sort Players"
@@ -50,7 +50,7 @@ RSpec.describe 'Team players index' do
         expect(page.find(id: "2")).to have_content(@player_1.name)
       end
 
-      it "I see a form that takes a number value" do
+      it "has a form that takes a number value and returns players based on that thresold" do
         visit "/teams/#{@team_1.id}/players"
 
         expect(page).to have_field("min_salary")
@@ -62,7 +62,6 @@ RSpec.describe 'Team players index' do
         expect(page).to have_no_content(@player_1.name)
         expect(page).to have_content(@player_2.salary)
         expect(page).to have_content(@player_3.position)
-
       end
     end
   end

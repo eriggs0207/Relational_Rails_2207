@@ -10,35 +10,41 @@ RSpec.describe 'the team delete' do
       free_agent: true, salary: 33000000)
     end
 
-  it 'I see a link to delete the player' do
-    visit "/players/#{@player_1.id}"
+  describe 'as a user' do
+    describe 'when I visit/players/:id' do
+      it 'has a link that will delete a player' do
+        visit "/players/#{@player_1.id}"
 
-    click_button "Delete #{@player_1.name}"
-    expect(current_path).to eq("/players")
+        click_button "Delete #{@player_1.name}"
+        expect(current_path).to eq("/players")
 
-    expect(page).to have_no_content(@player_1.name)
-    expect(page).to have_content(@player_2.salary)
+        expect(page).to have_no_content(@player_1.name)
+        expect(page).to have_content(@player_2.position)
+      end
+    end
 
-  end
+    describe 'when I visit/players' do
+      it 'has a link that will delete a player' do
+        visit "/players"
 
-  it 'I see a link to delete the player' do
-    visit "/players"
+        click_button "Delete #{@player_1.name}"
+        expect(current_path).to eq("/players")
 
-    click_button "Delete #{@player_1.name}"
-    expect(current_path).to eq("/players")
+        expect(page).to have_no_content(@player_1.name)
+        expect(page).to have_content(@player_2.free_agent)
+      end
+    end
 
-    expect(page).to have_no_content(@player_1.name)
-    expect(page).to have_content(@player_2.salary)
+    describe 'when I visit/team/:id/players' do
+      it 'has a link that will delete a player' do
+        visit "/teams/#{@team_1.id}/players"
 
-  end
+        click_button "Delete #{@player_1.name}"
+        expect(current_path).to eq("/players")
 
-  it 'I see a link to delete the player' do
-    visit "/teams/#{@team_1.id}/players"
-
-    click_button "Delete #{@player_1.name}"
-    expect(current_path).to eq("/players")
-
-    expect(page).to have_no_content(@player_1.name)
-    expect(page).to have_content(@player_2.salary)
+        expect(page).to have_no_content(@player_1.position)
+        expect(page).to have_content(@player_2.salary)
+      end
+    end
   end
 end
