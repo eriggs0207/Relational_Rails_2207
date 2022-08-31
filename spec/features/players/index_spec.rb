@@ -18,7 +18,7 @@ RSpec.describe 'players index page', type: :feature do
 
   describe 'as a user' do
     describe 'when I visit/players' do
-      it 'I see the name of each player record in the system' do
+      it 'has a name of each player record in the system' do
         visit '/players'
 
         expect(page).to have_no_content(@player_1.name)
@@ -44,7 +44,7 @@ RSpec.describe 'players index page', type: :feature do
         expect(page).to have_content("Free Agent Next Season: #{@player_4.free_agent}")
       end
 
-      it 'I see a link at the top of the page that takes me to players index' do
+      it 'has a link at the top of the page that takes me to /players' do
         visit "/players"
 
         click_on "Mlb Players"
@@ -52,7 +52,7 @@ RSpec.describe 'players index page', type: :feature do
         expect(current_path).to eq('/players')
       end
 
-      it 'I see a link at the top of the page that takes me to players index' do
+      it 'has a link at the top of the page that takes me to /teams' do
         visit "/players"
 
         click_on "Mlb Teams"

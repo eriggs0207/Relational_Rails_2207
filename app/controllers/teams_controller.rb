@@ -1,6 +1,7 @@
 class TeamsController < ApplicationController
+
   def index
-    @teams = Team.order("created_at")
+    @teams = Team.sort_by_creation    
   end
 
   def new
@@ -25,7 +26,12 @@ class TeamsController < ApplicationController
     @team = Team.find(params[:id])
   end
 
-private 
+  def destroy
+    @team = Team.destroy(params[:id])
+    redirect_to "/teams"
+  end
+
+private
   def team_params
     params.permit(:name, :city, :wins, :losses, :playoffs)
   end

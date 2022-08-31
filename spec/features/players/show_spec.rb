@@ -8,10 +8,11 @@ RSpec.describe 'players show page', type: :feature do
         free_agent: false, salary: 7400000)
     @player_2 = @team_1.players.create!(name: "Jacob deGrom", position: "Pitcher",
         free_agent: true, salary: 33000000)
-      end
+    end
+
   describe 'as a user' do
     describe 'when I visit/players/:id' do
-      it 'I see the players with that id' do
+      it 'has the players with that id' do
 
         visit "/players/#{@player_1.id}"
 
@@ -19,7 +20,7 @@ RSpec.describe 'players show page', type: :feature do
         expect(page).to_not have_content(@player_2.name)
       end
 
-      it 'includes the players attributes' do
+      it 'has the players attributes' do
 
         visit "/players/#{@player_1.id}"
 
@@ -28,7 +29,7 @@ RSpec.describe 'players show page', type: :feature do
         expect(page).to have_content("Free Agent Next Season: #{@player_1.free_agent}")
       end
 
-      it 'I see a link at the top of the page that takes me to players index' do
+      it 'has a link at the top of the page that takes me to /players' do
         visit "/players/#{@player_1.id}"
 
         click_on "Mlb Players"
@@ -36,7 +37,7 @@ RSpec.describe 'players show page', type: :feature do
         expect(current_path).to eq('/players')
       end
 
-      it 'I see a link at the top of the page that takes me to players index' do
+      it 'has a link at the top of the page that takes me to /players/:id' do
         visit "/players/#{@player_1.id}"
 
         click_on "Mlb Teams"

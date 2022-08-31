@@ -3,7 +3,9 @@
 <h1>Players</h1>
 <% @players.each do |player| %>
 <h3><%= player.name %> <%= button_to "Edit #{player.name}", "/players/#{player.id}/edit", method: :get %></h3>
+<p><%= button_to "Delete #{player.name}", "/players/#{player.id}", method: :delete %></p>
 <h5>Team: <%= player.team.city %> <%= player.team.name %></h5>
+<p>Position: <%= player.position %></p>
 <p>Salary: <%= player.salary %></p>
 <p>Free Agent Next Season: <%= player.free_agent %></p>
 <% end %>

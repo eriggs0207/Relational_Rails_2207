@@ -5,11 +5,13 @@
 <%= form.label :city %>
 <%= form.text_field :city%>
 <%= form.label :wins %>
-<%= form.text_field :wins%>
+<%= form.number_field :wins%>
 <%= form.label :losses %>
-<%= form.text_field :losses%>
-<%= form.label :playoffs %>
-<%= form.text_field :playoffs%>
+<%= form.number_field :losses%>
+<%= form.radio_button :playoffs, true%>
+<%= form.label "playoff team" %>
+<%= form.radio_button :playoffs, false%>
+<%= form.label "not a playoff team" %>
 
 
 <%= form.submit "Update Team" %>

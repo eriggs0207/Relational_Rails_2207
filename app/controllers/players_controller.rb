@@ -1,6 +1,7 @@
 class PlayersController < ApplicationController
   def index
-    @players = Player.where(free_agent: true)
+    @players = Player.current_free_agents
+
   end
 
   def show
@@ -17,6 +18,12 @@ class PlayersController < ApplicationController
     redirect_to "/players/#{@player.id}"
   end
 
+  def destroy
+    @player = Player.destroy(params[:id])
+    redirect_to "/players"
+  end
+
+private
   def player_params
     params.permit(:name, :position, :free_agent, :salary)
   end

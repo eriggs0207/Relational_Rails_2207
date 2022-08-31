@@ -10,71 +10,101 @@ RSpec.describe 'the player edit' do
       free_agent: true, salary: 33000000)
     end
 
-    it "I see a link to update the player" do
-      visit "/players/#{@player_1.id}"
+  describe 'as a user' do
+    describe 'when I visit/players/:id' do
+      it "has a link to update the player" do
+        visit "/players/#{@player_1.id}"
 
-      click_button "Edit #{@player_1.name}"
-      expect(current_path).to eq("/players/#{@player_1.id}/edit")
+        click_button "Edit #{@player_1.name}"
+        expect(current_path).to eq("/players/#{@player_1.id}/edit")
 
-      visit "/players/#{@player_2.id}"
+        visit "/players/#{@player_2.id}"
 
-      click_button "Edit #{@player_2.name}"
-      expect(current_path).to eq("/players/#{@player_2.id}/edit")
+        click_button "Edit #{@player_2.name}"
+        expect(current_path).to eq("/players/#{@player_2.id}/edit")
+      end
+
+      it 'can update a player' do
+        player_3 = @team_1.players.create!(name: "Frankie Lindor", position: "Shortstop",
+          free_agent: true, salary: 34000000)
+
+        visit "/players/#{player_3.id}"
+
+        expect(page).to have_content('Frankie Lindor')
+        click_button 'Edit Frankie Lindor'
+
+        fill_in 'Name', with: 'Francisco Lindor'
+        fill_in 'Salary', with: 33100000
+        click_button 'Update Player'
+
+        expect(current_path).to eq("/players/#{player_3.id}")
+        expect(page).to have_content('Francisco Lindor')
+        expect(page).to have_content(33100000)
+      end
     end
 
-    it 'can update a player' do
-      player_3 = @team_1.players.create!(name: "Frankie Lindor", position: "Shortstop",
-        free_agent: true, salary: 34000000)
+    describe 'when I visit/players/' do
+      it "has a link to update the player" do
+        visit "/players"
 
-      visit "/players/#{player_3.id}"
+        click_button "Edit #{@player_1.name}"
+        expect(current_path).to eq("/players/#{@player_1.id}/edit")
 
-      expect(page).to have_content('Frankie Lindor')
-      click_button 'Edit Frankie Lindor'
+        visit "/players"
 
-      fill_in 'Name', with: 'Francisco Lindor'
-      click_button 'Update Player'
+        click_button "Edit #{@player_2.name}"
+        expect(current_path).to eq("/players/#{@player_2.id}/edit")
+      end
 
-      expect(current_path).to eq("/players/#{player_3.id}")
-      expect(page).to have_content('Francisco Lindor')
+      it 'can update a player' do
+        player_3 = @team_1.players.create!(name: "Frankie Lindor", position: "Shortstop",
+          free_agent: true, salary: 34000000)
+
+        visit "/players"
+
+        expect(page).to have_content('Frankie Lindor')
+        click_button 'Edit Frankie Lindor'
+
+        fill_in 'Name', with: 'Francisco Lindor'
+        fill_in 'Position', with: 'Second Base'
+        click_button 'Update Player'
+
+        expect(current_path).to eq("/players/#{player_3.id}")
+        expect(page).to have_content('Francisco Lindor')
+        expect(page).to have_content('Second Base')
+      end
     end
 
-    it "I see a link to update the player" do
-      visit "/players"
+    describe 'when I visit/team/:id/players' do
+      it "has a link to update the player" do
+        visit "/teams/#{@team_1.id}/players"
 
-      click_button "Edit #{@player_1.name}"
-      expect(current_path).to eq("/players/#{@player_1.id}/edit")
+        click_button "Edit #{@player_1.name}"
+        expect(current_path).to eq("/players/#{@player_1.id}/edit")
 
-      visit "/players"
+        visit "/teams/#{@team_1.id}/players"
 
-      click_button "Edit #{@player_2.name}"
-      expect(current_path).to eq("/players/#{@player_2.id}/edit")
+        click_button "Edit #{@player_2.name}"
+        expect(current_path).to eq("/players/#{@player_2.id}/edit")
+      end
+
+      it 'can update a player' do
+        player_3 = @team_1.players.create!(name: "Frankie Lindor", position: "Shortstop",
+          free_agent: true, salary: 34000000)
+
+        visit "/teams/#{@team_1.id}/players"
+
+        expect(page).to have_content('Frankie Lindor')
+        click_button 'Edit Frankie Lindor'
+
+        fill_in 'Name', with: 'Francisco Lindor'
+        choose with: false
+        click_button 'Update Player'
+
+        expect(current_path).to eq("/players/#{player_3.id}")
+        expect(page).to have_content('Francisco Lindor')
+        expect(page).to have_content(false)
+      end
     end
-
-    it 'can update a player' do
-      player_3 = @team_1.players.create!(name: "Frankie Lindor", position: "Shortstop",
-        free_agent: true, salary: 34000000)
-
-      visit "/players"
-
-      expect(page).to have_content('Frankie Lindor')
-      click_button 'Edit Frankie Lindor'
-
-      fill_in 'Name', with: 'Francisco Lindor'
-      click_button 'Update Player'
-
-      expect(current_path).to eq("/players/#{player_3.id}")
-      expect(page).to have_content('Francisco Lindor')
-    end
-
-    it "I see a link to update the player" do
-      visit "/teams/#{@team_1.id}/players"
-
-      click_button "Edit #{@player_1.name}"
-      expect(current_path).to eq("/players/#{@player_1.id}/edit")
-
-      visit "/teams/#{@team_1.id}/players"
-
-      click_button "Edit #{@player_2.name}"
-      expect(current_path).to eq("/players/#{@player_2.id}/edit")
-    end
+  end
 end

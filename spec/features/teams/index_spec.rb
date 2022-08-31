@@ -14,20 +14,20 @@ RSpec.describe 'teams index page', type: :feature do
 
   describe 'as a user' do
     describe 'when I visit/teams' do
-      it 'I see the name of each team record in the system' do
+      it 'has the name of each team record in the system' do
         visit '/teams'
 
-      expect(page).to have_content(@team_1.name)
-      expect(page).to have_content(@team_1.city)
-      expect(page).to have_content("Record: #{@team_1.wins} - #{@team_1.losses}")
-      expect(page).to have_content("Playoff Team: #{@team_1.playoffs}")
-      expect(page).to have_content(@team_2.name)
-      expect(page).to have_content(@team_2.city)
-      expect(page).to have_content("Record: #{@team_2.wins} - #{@team_2.losses}")
-      expect(page).to have_content("Playoff Team: #{@team_2.playoffs}")
+        expect(page).to have_content(@team_1.name)
+        expect(page).to have_content(@team_1.city)
+        expect(page).to have_content("Record: #{@team_1.wins} - #{@team_1.losses}")
+        expect(page).to have_content("Playoff Team: #{@team_1.playoffs}")
+        expect(page).to have_content(@team_2.name)
+        expect(page).to have_content(@team_2.city)
+        expect(page).to have_content("Record: #{@team_2.wins} - #{@team_2.losses}")
+        expect(page).to have_content("Playoff Team: #{@team_2.playoffs}")
       end
 
-      it 'I see each team is ordered by mostly recently created with timestamp' do
+      it 'has each team ordered by mostly recently created with timestamp' do
         visit '/teams'
 
         expect(page.find(id: "0")).to have_content(@team_1.name)
@@ -38,10 +38,9 @@ RSpec.describe 'teams index page', type: :feature do
         expect(page.find(id: "1")).to have_content(@team_2.created_at)
         expect(page.find(id: "2")).to have_content(@team_3.created_at)
         expect(page.find(id: "3")).to have_content(@team_4.created_at)
-
       end
 
-      it 'I see a link at the top of the page that takes me to players index' do
+      it 'has a link at the top of the page that takes me to /players' do
         visit '/teams'
 
         click_on "Mlb Players"
@@ -49,8 +48,8 @@ RSpec.describe 'teams index page', type: :feature do
         expect(current_path).to eq('/players')
       end
 
-      it 'I see a link at the top of the page that takes me to players index' do
-        visit "/teams/"
+      it 'has a link at the top of the page that takes me to /teams' do
+        visit "/teams"
 
         click_on "Mlb Teams"
 

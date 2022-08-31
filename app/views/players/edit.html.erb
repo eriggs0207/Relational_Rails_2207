@@ -4,10 +4,12 @@
 <%= form.text_field :name %>
 <%= form.label :position %>
 <%= form.text_field :position %>
-<%= form.label :free_agent %>
-<%= form.text_field :free_agent %>
 <%= form.label :salary %>
-<%= form.text_field :salary %>
+<%= form.number_field :salary %>
+<%= form.radio_button :free_agent, true%>
+<%= form.label "free agent" %>
+<%= form.radio_button :free_agent, false%>
+<%= form.label "under contract" %>
 
 <%= form.submit "Update Player" %>
 <% end %>
