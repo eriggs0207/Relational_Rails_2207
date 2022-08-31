@@ -1,6 +1,10 @@
 class Team < ApplicationRecord
   has_many :players
 
+  def self.sort_by_creation
+    Team.order("created_at")
+  end
+
   def player_count
     self.players.count
   end
@@ -9,7 +13,7 @@ class Team < ApplicationRecord
     self.players.order(:name)
   end
 
-  def min_salary(user_input)
-    self.players.where("salary >= ?", user_input)
+  def min_salary(salary_num)
+    self.players.where("salary >= ?", salary_num)
   end
 end

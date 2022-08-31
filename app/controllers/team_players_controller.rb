@@ -11,7 +11,6 @@ class TeamPlayersController < ApplicationController
     end
   end
 
-
   def new
     @team = Team.find(params[:team_id])
   end
@@ -22,7 +21,7 @@ class TeamPlayersController < ApplicationController
     redirect_to "/teams/#{@team.id}/players"
   end
 
-
+private
   def player_params
     params.permit(:name, :position, :free_agent, :salary)
   end
